@@ -53,9 +53,7 @@
     
     /*Taille auto pour image et tableux*/
 
-    img,
-	table,
-	td {
+    img,table,td {
 		max-width: 100%;
 	}
     
