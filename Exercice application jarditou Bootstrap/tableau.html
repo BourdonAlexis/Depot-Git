@@ -9,14 +9,27 @@
     <!-- <link rel="stylesheet" media="screen and (max-width: 768px)" href="assets/css/media.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body>
+<body class="mx-5">
      <!--Entête-->
-     <header class="textelogo">
-        <img class="logo_jarditou" src="src/img/jarditou_logo.jpg" height="40" title="jarditou" alt="jarditou">
-        <p class="toutlejardin">Tout le jardin</p>
+    
+     <header>
+        <div class="container-fluid">
+                <div class="row align-items-end align-items-center">
+                    <div class="col-lg-6">
+                        <img class="mw-100 mt-2" style="width: 30%" src="src/img/jarditou_logo.jpg" height="auto" title="jarditou" alt="jarditou" >  
+                    </div>
+                    <div class="col-lg-6 text-right ">
+                        <span class="h3 d-none d-lg-block">Tout le jardin </span>
+                        <span class="h5 d-lg-none">Tout le jardin </span>
+                    </div>
+                </div>
+        </div>
     </header>
-    <!--redirection sur la page-->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+       <!--redirection sur la page-->
+    <nav class="navbar navbar-expand-lg bg-light navbar-light">
+        <a class="align-items-center mr-2 navbar-brand" href="index.html#accueil">
+               Jarditou.com
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
         </button>   
@@ -32,85 +45,78 @@
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
             </ul>
-        </div> 
+        </div>
+        <form class="form-inline d-none d-lg-block">
+            <input class="form-control mr-2" type="search" placeholder="votre promotion" aria-label="recherche"> 
+            <button type="button" class="btn btn-outline-success mr-2"><span>Recherche</span></button>
+        </form>
     </nav>
     <!--image promotion lame terrasse-->
     <div>
-        <img src="src/img/promotion.jpg" title="promotion sur lames de terrasse" alt="jarditou" class="promotion">
+        <img src="src/img/promotion.jpg" title="promotion sur lames de terrasse" alt="jarditou" class="mw-100" style="width: 200%;"> 
     </div>
         <!--Tableu BBC-->
-    <div>
-        
-        <h2 id="tableau"> Tableau</h2>
-        <hr>
-
-        <div class="scroller">
-            <table>
-                <caption><b>Tableau</b></caption>
-                <tbody>
-                    <tr>
-                        <td><b>Photo</b></td>
-                        <td><b>ID</b></td>
-                        <td><b>Catégorie</b></td>
-                        <td><b>Libellé</b></td>
-                        <td><b>Prix</b></td>
-                        <td><b>Couleur</b></td>
-                    </tr>
-                    <tr>
-                        <td><img src="src/img/7.jpg" alt="barbecues aramis" title="barbecues aramis" height="120" width="120"></td>
-                        <td>7</td>
-                        <td>Barbecues</td>
-                        <td>Aramis</td>
-                        <td>110.00€</td>
-                        <td>Brun</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="src/img/8.jpg" alt="barbecues Athos" title="barbecues Athos" height="120" width="120">
-                        </td>
-                        <td>8</td>
-                        <td>Barbecues</td>
-                        <td>Athos</td>
-                        <td>249.99€</td>
-                        <td>Noir</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="src/img/11.jpg" alt="barbecues Clatronic" title="barbecues Clatronic" height="120" width="120">
-                        </td>
-                        <td>11</td>
-                        <td>Barbecues</td>
-                        <td>Clatronic</td>
-                        <td>135.90€</td>
-                        <td>Chrome</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="src/img/12.jpg" alt="barbecues Camping" title="barbecues Camping" height="120" width="120">
-                        </td>
-                        <td>12</td>
-                        <td>Barbecues</td>
-                        <td>Camping</td>
-                        <td>88.00€</td>
-                        <td>noir</td>
-                    </tr>
-                    <tr>
-                        <td><img src="src/img/13.jpg" alt="Brouette Green" title="Brouette Green" height="70" width="120"></td>
-                        <td>13</td>
-                        <td>Brouette</td>
-                        <td>Green</td>
-                        <td>49.00€ Verte</td>
-                        <td>Verte</td>
-                    </tr>
-                </tbody>    
-            </table> 
-        </div>
+    
+    <div class="table-responsive overflow-auto" id="tableau">
+        <table class="table table-striped table-hover table-bordered">
+            <tbody>
+                <tr class="table-secondary">
+                    <td><b>Photo</b></td>
+                    <td><b>ID</b></td>
+                    <td><b>Catégorie</b></td>
+                    <td><b>Libellé</b></td>
+                    <td><b>Prix</b></td>
+                    <td><b>Couleur</b></td>
+                </tr>
+                <tr class="table-warning">
+                    <td><img src="src/img/7.jpg" alt="barbecues aramis" title="barbecues aramis" height="120" width="120"></td>
+                    <td>7</td>
+                    <td>Barbecues</td>
+                    <td>Aramis</td>
+                    <td>110.00€</td>
+                    <td>Brun</td>
+                </tr>
+                <tr>
+                    <td><img src="src/img/8.jpg" alt="barbecues Athos" title="barbecues Athos" height="120" width="120"></td>
+                    <td>8</td>
+                    <td>Barbecues</td>
+                    <td>Athos</td>
+                    <td>249.99€</td>
+                    <td>Noir</td>
+                </tr>
+                <tr class="table-warning"><td>
+                    <img src="src/img/11.jpg" alt="barbecues Clatronic" title="barbecues Clatronic" height="120" width="120"></td>
+                    <td>11</td>
+                    <td>Barbecues</td>
+                    <td>Clatronic</td>
+                    <td>135.90€</td>
+                    <td>Chrome</td>
+                </tr>
+                <tr>
+                    <td><img src="src/img/12.jpg" alt="barbecues Camping" title="barbecues Camping" height="120" width="120"></td>
+                    <td>12</td>
+                    <td>Barbecues</td>
+                    <td>Camping</td>
+                    <td>88.00€</td>
+                    <td>noir</td>
+                </tr>
+                <tr class="table-warning">
+                    <td><img src="src/img/13.jpg" alt="Brouette Green" title="Brouette Green" height="70" width="120"></td>
+                    <td>13</td>
+                    <td>Brouette</td>
+                    <td>Green</td>
+                    <td>49.00€ Verte</td>
+                    <td>Verte</td>
+                </tr>
+            </tbody>    
+        </table> 
+    </div>
       <!--bas de page-->
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar2">
         <span class="navbar-toggler-icon"></span>
         </button>   
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <div class="collapse navbar-collapse" id="collapsibleNavbar2">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="#mentionlégales" title="Allez aux mentions légales">Mentions légales</a>
