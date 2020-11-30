@@ -64,62 +64,59 @@
     <div>
         <form action="destination.php" method="post">
             <div>
-                <fieldset>
-                    <legend class="h2">Vos coordonées</legend>
-                    <label for="nom">Votre nom*  </label>
-                    <input class="form-control" type="text" name="nom" id="nom" required>
-                    <br>
-                    <label for="prénom">Votre prénom* </label> 
-                    <input class="form-control" type="text" name="prénom" id="prénom" required>
-                    <br>
-                    <br>
-                    Sexe* :
-                    <!--balise selection type de sexe-->                        
-                    <input type="radio" name="selectionsexe" id="féminin" required>
-                    <label for="féminin">Féminin</label> 
-                    <input type="radio" name="selectionsexe" id="masculin" required> 
-                    <label for="masculin">Masculin</label> 
-                    <input type="radio" name="selectionsexe" id="neutre" required> 
-                    <label for="neutre">Neutre</label> 
-                    <!--Date-->
-                    <br><br>
-                    <label for="date">Date de naissance*  </label>
-                    <input class="form-control" type="date" name="date" id="date" required>
-                    <!--Code postal-->
-                    <br>
-                    <label for="codepostal">Code postal*  </label>
-                    <input class="form-control" type="number" name="codepostal" id="codepostal" required>
-                    <!--adresse--> 
-                    <br>
-                    <label for="adresse">Adresse  </label>
-                    <input class="form-control" type="text" name="adresse" id="adresse">
-                    <!--Ville-->
-                    <br>
-                    <label for="ville">Ville  </label>
-                    <input class="form-control" type="text" name="ville" id="ville">
-                    <!--Email-->
-                    <br>
-                    <label for="email">Email*  </label>
-                    <input class="form-control" type="email" name="email" id="email" placeholder="dave.loper@afpa.fr" size="25" maxlength="25" required> 
-                </fieldset>
+                <legend class="h2">Vos coordonées</legend>
+                <label for="nom">Votre nom*  </label>
+                <input class="form-control" type="text" name="nom" id="nom" placeholder="Veuillez saisir votre nom" required>
+                <br>
+                <label for="prénom">Votre prénom* </label> 
+                <input class="form-control" type="text" name="prénom" id="prénom" placeholder="Veuillez saisir votre prénom" required>
+                <br>
+                <br>
+                Sexe* :
+                <!--balise selection type de sexe-->                        
+                <input type="radio" name="selectionsexe" id="féminin" required>
+                <label for="féminin">Féminin</label> 
+                <input type="radio" name="selectionsexe" id="masculin" required> 
+                <label for="masculin">Masculin</label> 
+                <input type="radio" name="selectionsexe" id="neutre" required> 
+                <label for="neutre">Neutre</label> 
+                <!--Date-->
+                <br><br>
+                <label for="date">Date de naissance*  </label>
+                <input class="form-control" type="date" name="date" id="date" required>
+                <!--Code postal-->
+                <br>
+                <label for="codepostal">Code postal*  </label>
+                <input class="form-control" type="number" name="codepostal" id="codepostal" required>
+                <!--adresse--> 
+                <br>
+                <label for="adresse">Adresse  </label>
+                <input class="form-control" type="text" name="adresse" id="adresse">
+                <!--Ville-->
+                <br>
+                <label for="ville">Ville  </label>
+                <input class="form-control" type="text" name="ville" id="ville">
+                <!--Email-->
+                <br>
+                <label for="email">Email*  </label>
+                <input class="form-control" type="email" name="email" id="email" placeholder="dave.loper@afpa.fr" size="25" maxlength="25" required> 
             </div>
             <br>
             <div>
-                <fieldset>
-                    <legend>Votre demande</legend>
-                    <!--menu de selection sujet-->
+                <legend>Votre demande</legend>
+                <!--menu de selection sujet-->
                     <label for="sujet">Sujet* : </label>
                     <select class="form-control" name="sujet" id="sujet" required>
-                        <option value="" disabled selected>Choisir un sujet</option>
-                        <option value="">Sujet 1</option>
-                        <option value="">Sujet 2</option>
-                        <option value="">Sujet 3</option>       
-                    </select>
-                    <br>   
+                    <option value="" disabled selected>Choisir un sujet</option>
+                    <option value="">Sujet 1</option>
+                    <option value="">Sujet 2</option>
+                    <option value="">Sujet 3</option>       
+                </select>
+                <br>   
                 <!-- Votre question -->
-                    <label for="question">Votre question*  </label>
-                    <textarea class="form-control" id="question" name="question" required></textarea>       
-                </fieldset>
+                <label for="question">Votre question*  </label>
+                <textarea class="form-control" id="question" name="question" required></textarea>       
+                
                 <!--Bouton acceptation formulaire-->
                 <br>
                 <input type="checkbox" name="traitementinformatique" id="traitementinformatique" required>
