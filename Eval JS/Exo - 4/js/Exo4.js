@@ -16,12 +16,12 @@ var PORT;
 //fonction du prix unitaire ----------------------------------------------
 function prixUnitaire()
 {
-    PU=prompt("Saisir le prix unitaire")
+    PU=prompt("Saisir le prix unitaire");
 }
 //fonction de la quantitée ---------------------------------------------------
 function Quantité()
 {
-    QTECOM=prompt("Saisir la quantitée voulue")
+    QTECOM=prompt("Saisir la quantitée voulue");
 }
 //fonction du prix à payer ---------------------------------------------------------
 function prixApayer() 
@@ -35,7 +35,7 @@ function prixApayer()
         PORT=REM*0.02;
         PORTMAX = Math.max(PORT, 6);
         PAP=REM+PORTMAX;
-        SOUSTOT=TOT-REM
+        SOUSTOT=TOT-REM;
         console.log(TOT+"€ donc remise 5% (-"+(Math.round((SOUSTOT) * 100) / 100)+"€) soit "+(Math.round((REM) * 100) / 100)+" et frais port 2% soit "+(Math.round((PORT) * 100) / 100)+" € mini 6 €; à payer : "+(Math.round((REM) * 100) / 100)+"+"+(Math.round((PORTMAX) * 100) / 100)+" = "+(Math.round((PAP) * 100) / 100)+" €");
     }
     //reduc au dessus 200€ 10%
@@ -46,7 +46,7 @@ function prixApayer()
         PORT=REM*0.02;
         PORTMAX = Math.max(PORT, 6);
         PAP=REM+PORTMAX;
-        SOUSTOT=TOT-REM
+        SOUSTOT=TOT-REM;
         console.log("remise 10% ("+(Math.round((SOUSTOT) * 100) / 100)+"€) soit "+(Math.round((REM) * 100) / 100)+"€ et frais port 2% soit "+(Math.round((PORT) * 100) / 100)+" € mini 6 €; à payer : "+(Math.round((REM) * 100) / 100)+"+"+(Math.round((PORTMAX) * 100) / 100)+" = "+(Math.round((PAP) * 100) / 100)+" €");
         
       
@@ -57,7 +57,7 @@ function prixApayer()
         REM=TOT*0.90;
         if (REM>=500)
         {
-            PORT = 0
+            PORT = 0;
             PAP=REM+PORT;
             SOUSTOT=REM-TOT;
             console.log(" remise 10% ("+(Math.round((SOUSTOT) * 100) / 100)+"€) soit "+(Math.round((REM) * 100) / 100)+"€ et frais port = 0; à payer : "+(Math.round((PAP) * 100) / 100)+" €");
@@ -67,7 +67,7 @@ function prixApayer()
             PORT=REM*0.02;
             PORTMAX = Math.max(PORT, 6);
             PAP=REM+PORTMAX;
-            SOUSTOT=TOT-REM
+            SOUSTOT=TOT-REM;
             console.log(Math.round((PAP) * 10) / 10);
             console.log("remise 10% ("+(Math.round((SOUSTOT) * 100)/100)+" €) soit "+(Math.round((REM) * 100) / 100)+" et frais port 2% (de "+(Math.round((REM) * 10) / 10)+" €) soit +"+(Math.round((PORTMAX) * 100) / 100)+" € ; à payer : "+(Math.round((REM) * 100) / 100)+"+"+(Math.round((PORTMAX) * 100) / 100)+" = "+Math.round((PAP) * 100) / 100+" €.");
         }

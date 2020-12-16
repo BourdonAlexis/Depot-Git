@@ -22,10 +22,10 @@ function saisie(){
         }
         //ajoute 1 si age + ou =100ans et casse la boucle
         else{
-            vieux++
+            vieux++;
             break;
         }  
-    }while (age) 
+    }while(age) 
 }
 //affiche les résultat (relié au bouton résultat)
 function resultat(){

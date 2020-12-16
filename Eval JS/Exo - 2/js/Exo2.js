@@ -1,13 +1,13 @@
 //saisie de n
 
 function ChiffreAMultiplier(){
-    n = prompt("saisir le chiffre que vous souhaitez multiplier")
+    n = prompt("saisir le chiffre que vous souhaitez multiplier");
 }
 
 //saisie de x
 
 function Quelmultiple(){
-    x = prompt("saisir la valeur par laquel vous souhaitez multiplier "+n)
+    x = prompt("saisir la valeur par laquel vous souhaitez multiplier "+n);
 }
 
 //affiche le resultat de N multiple de X

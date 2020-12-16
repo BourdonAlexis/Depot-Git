@@ -3,7 +3,7 @@ var tab = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "No
 
 
 function suppPrenom(){
-    supp=prompt("prénom à supprimer")
+    supp=prompt("prénom à supprimer");
 }
 
 
@@ -223,7 +223,7 @@ function resultat(){
         break;
         //Message d'erreur    
         default: 
-            alert("Veulliez saisir un nom dans la liste ci-dessous")
+            alert("Veulliez saisir un nom dans la liste ci-dessous");
         } 
 
 }

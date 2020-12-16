@@ -1,12 +1,12 @@
 function checkForm(f) 
 {
-    var formulaire = true
+    formulaire=true;
 
     //nom 
     if (form1.nom.value=="")
     {
-        formulaire=false;
-        alert("Vous n'avez pas saisie votre nom !");
+        nom.setCustomValidity("Veuillez saisir votre nom !");
+        return false;
 
     }
 
@@ -14,81 +14,81 @@ function checkForm(f)
     //prénom
     if (form1.prénom.value=="")
     {
-        formulaire=false;
-        alert("Vous n'avez pas saisie votre prénom !");
+        prénom.setCustomValidity("Veuillez saisir votre prénom !");   
+        return false;
     }
 
     //selection du sexe
     if (form1.selectionsexe.value==false)
     {
-        formulaire=false;
-        alert("Vous n'avez pas saisie votre sexe !");
+        neutre.setCustomValidity("Veuillez saisir votre sexe !");
+        return false;
     }
     //date naissance
     if (form1.date.value.charAt(7)=="")
     {
-        formulaire=false;
-        alert("Date de naissance incorrect!");
+        date.setCustomValidity("Veuillez saisir une date de naissance valide !");
+        return false;
     }
     //code postal 
     if (form1.codepostal.value.charAt(4)=="")
     {
-        formulaire=false;
-        alert("Code postal incorrect!");
+        codepostal.setCustomValidity("Veuillez saisir votre code postal !");
+        return false;
     }
 
 
     //email
-    var email = document.getElementById('email').value;
+    var email2 = document.getElementById('email').value;
     var H = "@";
-    var cherche = email.indexOf(H);
+    var cherche = email2.indexOf(H);
     if(cherche==-1)
     {
-         alert('Veuillez entrer un email valide!');
-        document.getElementById('email').focus;
-        formulaire=false;
-             
-    }
-    //sujet
-    var sujet = document.getElementsByName('choix').value;
-    if(sujet=="0")
-    {
-         alert('Veuillez choisir un sujet!');
-        document.getElementById('sujet').focus;
-        formulaire=false;
-             
+        email.setCustomValidity("Veuillez saisir un email valide !");
+        return false;  
     }
     
-
+    //sujet
+   
+    if (sujet.value == "Choisir un sujet") {
+        sujet.setCustomValidity("Veuillez selectionner un sujet !");
+        return false;
+        }
+        
     
     //question
-    var question = document.getElementById('question').value;
-    if(question=="")
+    var question2 = document.getElementById('question').value;
+    if(question2=="")
     {
-         alert('Veuillez entrer une question valide!');
-        document.getElementById('question').focus;
-        formulaire=false;
-             
+        question.setCustomValidity("Veuillez saisir votre question !");
+        return false;    
     }
+
     //accepte formulaire
     var validation = document.getElementById('traitementinformatique').checked;
     if(validation==false)
     {
-         alert('Veuillez accepter le traitement informatique! ');
-        document.getElementById('traitementinformatique').focus;
-        formulaire=false;
-             
+        traitementinformatique.setCustomValidity("Veuillez valider le traitement informatique !");
+        return false;        
     }
     
 
-    //alert fin de check
+    //fin de check
     if (formulaire==true)
     {
-        return true
+        return true;
     }
     else 
     {
-        alert("Le formulaire ne c'est pas envoyé correctement")
-        return false
+        alert("Le formulaire ne c'est pas envoyé correctement");
+        return false;
     }
 }
+// Affiche selection sujet en dehors du checkform
+sujet.addEventListener("change",function()
+{
+    if (sujet.value != "Choisir un sujet") 
+    {
+    question.value = sujet.value;
+    }
+});    
