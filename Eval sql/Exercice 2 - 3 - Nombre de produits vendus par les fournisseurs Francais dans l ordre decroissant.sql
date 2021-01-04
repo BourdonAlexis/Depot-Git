@@ -1,4 +1,4 @@
-SELECT ProductName,UnitsInStock,country
+SELECT ProductName,UnitsInStock
 FROM products
 JOIN order_details
 ON order_details.productID = products.ProductID
