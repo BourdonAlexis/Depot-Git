@@ -1,4 +1,4 @@
-    SELECT ProductName,UnitPrice
+    SELECT ProductName AS 'Produit' ,UnitPrice AS 'Prix'
     FROM products
     JOIN suppliers
 	 ON suppliers.SupplierID
