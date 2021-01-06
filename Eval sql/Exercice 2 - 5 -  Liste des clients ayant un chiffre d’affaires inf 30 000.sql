@@ -1,6 +1,9 @@
-SELECT CompanyName AS 'Client', SUM(Freight) AS "Chiffre d'affaire",Country AS 'Pays'
+SELECT CompanyName AS 'Client', SUM(order_details.UnitPrice*order_details.Quantity) AS "Chiffre d'affaire",Country AS 'Pays'
 FROM customers
 JOIN orders
 ON customers.CustomerID = orders.CustomerID
+JOIN order_details
+ON orders.OrderID = order_details.OrderID
 GROUP BY customers.CustomerID
-HAVING SUM(Freight) > 30;
+HAVING SUM(order_details.UnitPrice*order_details.Quantity) > 30000
+ORDER BY SUM(order_details.UnitPrice*order_details.Quantity) DESC;
