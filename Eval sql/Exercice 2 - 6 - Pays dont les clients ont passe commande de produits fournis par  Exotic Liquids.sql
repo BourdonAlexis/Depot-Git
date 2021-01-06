@@ -8,4 +8,5 @@ JOIN products
 ON order_details.ProductID = products.ProductID
 JOIN suppliers
 ON products.SupplierID = suppliers.SupplierID
-WHERE suppliers.CompanyName = 'Exotic Liquids' ;
+WHERE suppliers.CompanyName = 'Exotic Liquids'
+ORDER BY customers.Country ASC;
