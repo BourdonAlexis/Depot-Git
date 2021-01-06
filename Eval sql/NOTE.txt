@@ -1,0 +1,2 @@
+Pour EXERCICE 2 (1 à 10)
+Renommer la table "order details" en "order_details" ou charger le fichier "northwind_MySQL_MODIF"
