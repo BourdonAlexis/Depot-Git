@@ -1,6 +1,9 @@
-SELECT ProductName AS 'Fournisseur',UnitsInStock AS 'Nombre de produit'
-FROM products
-JOIN suppliers
+SELECT CompanyName AS 'Fournisseur', COUNT(suppliers.SupplierID) AS 'Nombre de produit'
+FROM suppliers
+JOIN products
 ON products.SupplierID = suppliers.SupplierID
-WHERE country = 'france'
-ORDER BY unitsInStock DESC ;
+WHERE suppliers.Country = 'France' 
+GROUP BY suppliers.SupplierID 
+ORDER BY COUNT(suppliers.SupplierID) DESC;
+
+
