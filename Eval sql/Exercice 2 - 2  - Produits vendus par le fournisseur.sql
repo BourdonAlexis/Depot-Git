@@ -1,5 +1,6 @@
     SELECT ProductName AS 'Produit' ,UnitPrice AS 'Prix'
     FROM products
     JOIN suppliers
-	 ON suppliers.SupplierID
-	 WHERE suppliers.SupplierID = '1'
+	 ON suppliers.SupplierID = Products.SupplierID
+	 WHERE CompanyName = 'Exotic Liquids'
+	 
