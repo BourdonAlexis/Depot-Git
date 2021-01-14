@@ -1,0 +1,118 @@
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------Application 3 pages-----------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
+
+/* Menu de navigation */ 
+
+
+.navigation {
+    background-color: black;
+    color: white;
+    border: 3px solid black ;
+    
+}
+
+/*Couleur titre navigation*/
+
+a {
+    color: white;
+}
+
+
+
+/*Alignement et retirer point navigation*/
+li {
+    list-style: none;
+    display : inline;
+}
+
+/*------------------------------------------------------------------*/
+
+/*Marge de la page*/
+
+body {
+    
+    margin: 1% 18% 1% 18%;   
+}
+
+/*------------------------------------------------------------------*/
+
+/*Texte et logo alignement*/
+
+.textelogo {
+    display: flex;
+    align-items: center;
+}
+
+/*Logo jarditou*/
+
+.logo_jarditou {
+    width: 10em;
+    max-width: 70%;
+    height: auto;
+}
+
+/* Texte tout le jardin*/
+
+.toutlejardin {
+    
+    font-size: 17pt;
+    margin-bottom : 15pt;
+    margin-top : 15pt;  
+    margin-left: 20%;
+}
+
+/*------------------------------------------------------------------*/
+
+/*Taille des titres*/
+
+#accueil {
+    font-size :30px
+}
+
+h2 {
+    font-size :17px
+}
+
+
+/*Police écriture*/
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 3em;
+}
+
+/*------------------------------------------------------------------*/
+
+/*Adaptation image lame terrasse à la taille de l'écran*/ 
+
+.promotion {
+    max-width: 100%;
+    height: auto;
+}
+
+/*------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------Application Index/Accueil-----------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
+
+/*Colone droite*/
+
+.colonne {
+    display: block;
+    max-height : 100% ;
+    background:lightgray ;
+    column-width: 40em;
+    margin-bottom: 4px;
+}
+
+/*------------------------------------------------------------------*/
+/*Alignement colonne*/
+
+.alignement {
+    display: flex;
+    justify-content: center;
+}
+
